@@ -36,10 +36,10 @@ function generatePictures(data) {
     galleryImg.classList.add("gallery-img");
     galleryImg.innerHTML = ` 
         <div class="gallery-info">
-        <img src=${photo.src.large}> </img>
           <p>${photo.photographer}</p>
-          <a href=${photo.src.original} title="Download Image"><i class="fas fa-download"></i> </a>
+          <a href=${photo.src.original} target="_blank" title="Download Image"><i class="fas fa-download"></i> </a>
           </div>
+          <img src=${photo.src.large}/> 
           `;
     gallery.appendChild(galleryImg);
   });
