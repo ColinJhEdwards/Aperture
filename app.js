@@ -34,8 +34,12 @@ function generatePictures(data) {
     console.log(photo);
     const galleryImg = document.createElement("div");
     galleryImg.classList.add("gallery-img");
-    galleryImg.innerHTML = `<img src=${photo.src.large}> </img>
+    galleryImg.innerHTML = ` 
+        <div class="gallery-info">
+        <img src=${photo.src.large}> </img>
           <p>${photo.photographer}</p>
+          <a href=${photo.src.original} title="Download Image"><i class="fas fa-download"></i> </a>
+          </div>
           `;
     gallery.appendChild(galleryImg);
   });
