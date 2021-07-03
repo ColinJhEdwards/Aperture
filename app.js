@@ -50,10 +50,17 @@ async function curatedPhotos() {
 }
 
 async function searchPhotos(search) {
+  clear("");
   const data = await fetchApi(
     `https://api.pexels.com/v1/search?query=${search}+query&per_page=15&page=1`
   );
   generatePictures(data);
+}
+
+//clears default rendered photos and input value when searching for photos
+function clear() {
+  gallery.innerHTML = "";
+  searchInput.value = "";
 }
 
 curatedPhotos();
