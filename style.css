@@ -105,3 +105,17 @@ header h2 {
   font-size: 1.2rem;
   cursor: pointer;
 }
+
+@media screen and (max-width: 414px) {
+  .gallery {
+    padding: 0rem;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .gallery {
+    padding: 0rem;
+    width: 95%;
+  }
+}
